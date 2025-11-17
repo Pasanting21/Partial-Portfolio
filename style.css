@@ -1,0 +1,186 @@
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(-45deg, #a18cd1 0%, #fbc2eb 25%, #fad0c4 50%, #fcb69f 75%, #a1c4fd 100%);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease-in-out infinite;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      overflow: hidden;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    /* Floating shapes para wow */
+    .bg-shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.18;
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(2px);
+      animation: floatShape 16s ease-in-out infinite alternate;
+    }
+    .bg-shape1 {
+      width: 340px; height: 340px;
+      left: -120px; top: -80px;
+      background: #fbc2eb;
+      animation-delay: 0s;
+    }
+    .bg-shape2 {
+      width: 220px; height: 220px;
+      right: -80px; top: 60px;
+      background: #a1c4fd;
+      animation-delay: 4s;
+    }
+    .bg-shape3 {
+      width: 180px; height: 180px;
+      left: 60px; bottom: -60px;
+      background: #fad0c4;
+      animation-delay: 8s;
+    }
+    .bg-shape4 {
+      width: 120px; height: 120px;
+      right: 40px; bottom: 40px;
+      background: #a18cd1;
+      animation-delay: 12s;
+    }
+    @keyframes floatShape {
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(-40px) scale(1.08); }
+    }
+    .game {
+      text-align: center;
+      background: rgba(255,255,255,0.95);
+      padding: 40px 32px 32px 32px;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(60,60,120,0.15);
+      min-width: 370px;
+      margin: auto;
+    }
+    h1 {
+      margin-bottom: 18px;
+      color: #2a2a72;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px #e0e7ff;
+    }
+    .scores {
+      margin-bottom: 18px;
+      font-size: 1.2rem;
+      color: #444;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .scores span {
+      padding: 4px 16px;
+      border-radius: 8px;
+      background: #e0e7ff;
+      margin: 0 2px;
+      transition: background 0.3s;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      gap: 8px;
+      margin: 0 auto 18px auto;
+      background: #b3bcf5;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px #b3bcf5;
+      padding: 10px;
+    }
+    .cell {
+      width: 100px;
+      height: 100px;
+      background: white;
+      border: 2.5px solid #2a2a72;
+      font-size: 2.7rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #e0e7ff;
+      transition: background 0.2s, transform 0.15s, color 0.2s;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .cell:not(.taken):hover {
+      background: #e0e7ff;
+      transform: scale(1.07);
+      box-shadow: 0 4px 16px #b3bcf5;
+    }
+    .cell.taken {
+      cursor: not-allowed;
+      color: #b3bcf5;
+      animation: pop 0.25s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    @keyframes pop {
+      0% { transform: scale(0.7); }
+      80% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+    .cell.win {
+      background: #ffe066 !important;
+      color: #2a2a72 !important;
+      animation: winflash 0.7s 2;
+    }
+    @keyframes winflash {
+      0%, 100% { box-shadow: 0 0 0 #ffe066; }
+      50% { box-shadow: 0 0 24px #ffe066; }
+    }
+    .status {
+      margin-top: 18px;
+      font-size: 1.3rem;
+      color: #2a2a72;
+      font-weight: 600;
+      min-height: 32px;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 4px #e0e7ff;
+    }
+    button {
+      margin: 10px 8px 0 8px;
+      padding: 10px 28px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #0a74da 60%, #2a2a72 100%);
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 2px 8px #b3bcf5;
+      transition: background 0.2s, transform 0.15s;
+      margin-bottom: 5px;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #2a2a72 60%, #0a74da 100%);
+      transform: scale(1.06);
+    }
+
+    .back-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #4f8cff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #2563eb;
+}
+
+.back-link i {
+    font-size: 18px;
+}

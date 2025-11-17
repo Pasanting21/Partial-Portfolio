@@ -1,78 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
 </head>
-
 <body>
-    <div class="bg-animated">
-        <div class="bg-shape bg-shape1"></div>
-        <div class="bg-shape bg-shape2"></div>
-        <div class="bg-shape bg-shape3"></div>
+  <div class="bg-shape bg-shape1"></div>
+  <div class="bg-shape bg-shape2"></div>
+  <div class="bg-shape bg-shape3"></div>
+  <div class="bg-shape bg-shape4"></div>
+  <a href="/index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i>- Back to
+        Portfolio -</a>
+  <div class="game" style="position:relative; z-index:1;">
+    <h1>Tic Tac Toe</h1>
+    <div class="scores">
+      <span id="scoreX">Player X: 0</span> |
+      <span id="scoreO">Player O: 0</span>
+      
     </div>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contacts</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about">
-        <img src="Tisoy1.jpg" alt="Profile Picture" width="150">
-        <h2>About Me</h2>
-        <p>Hi! I’m Gennilo Dave G. Pasanting, 16 years old, born on November 3, 2008. I’m into volleyball, gaming, and
-            pretty much anything that keeps me physically active. I also enjoy drawing, playing the guitar, and
-            singing—even if I’m not that great at it, I still have fun doing it. I used to be really into coding,
-            especially back in Grade 11 when it first caught my interest, but now that I’m in Grade 12, the passion’s
-            faded a bit. Still, I like to explore different things and just go with whatever keeps life interesting.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>PDF Generator</h3>
-            <p>This project is a clean, functional web application that generates well-formatted PDF reports based on user input. Users fill out a simple form with fields for author, year, product, brand, and a description, which is then processed into a standardized PDF document. It features an intuitive UI, supports custom text content, and is ideal for creating product summaries, research reports, or documentation. The system is extendable for database integration and is built using HTML, CSS, JavaScript, PHP, and TCPDF.</p>
-            <p>If you wanna go see: <a href="PDF-EXPORTER/index.php">Click Here</a> PS: It ain't working properly yet. it only saves the code in your downloads folder.
-                You need to open the index.php file in a local server like XAMPP or WAMP to make it work.
-                Also, you need to download TCPDF library and put it in the same folder as index.php.
-            </p>
-            </p>
-        </div>
-        <div class="project">
-            <h3>Pixelated Website</h3>
-            <p>This project is an interactive web dashboard with a unique pixel art theme, simulating a retro-style interface enhanced by vibrant visuals and a toggleable day/night mode. It features a functional user system with login and account options, personalized welcome messages with avatars, and modular buttons for tasks like tracking assignments, viewing messages, checking grades, and more. Designed for both functionality and visual appeal, it offers a custom pixel art UI for an engaging experience and is built using HTML, CSS, JavaScript, PHP, and pixel art graphics.</p>
-            <p>If you wanna go see: <a href="PixelatedWebsite/index.php">Click Here</a> PS: It downloads the code in your folder still.</p>
-        </div>
-        <div class="project">
-            <h3>Task Tracker</h3>
-            <p>Task Tracker is a productivity tool designed to help individuals and teams manage daily tasks, prioritize work, set deadlines, and collaborate efficiently. It supports creating, updating, categorizing, and assigning tasks with priority levels and reminders. Users can track progress through statuses like To-Do, In Progress, and Done, organize with tags, and filter or search tasks easily. Features include a visual dashboard (like a Kanban board), real-time notifications, and cross-platform access across web, mobile, or desktop. Built using HTML, CSS, and JavaScript, it streamlines workflow and enhances time management.</p>
-            <p>If you wanna go see: <a href="Task Tracker with Local Storage/index.html">Click Here</a></p>
-        </div>
-        <div class="project">
-            <h3>Tic Tac Toe</h3>
-            <p>Tic-tac-toe, also known as noughts and crosses or Xs and Os, is a classic two-player game played on a 3x3 grid. The objective is to be the first to align three of your symbols (Xs or Os) in a row, either horizontally, vertically, or diagonally. Players take turns marking the grid, aiming to win by getting three of their symbols in a row before the opponent does.</p>
-            <p>If you wanna go see: <a href="TIC TAC TOE/index.html">Click Here</a></p>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contacts</h2>
-        <a href="https://www.facebook.com/Pasanting21" class="fa fa-facebook"></a>
-        <a href="https://www.instagram.com/gennilo_dave_pasanting/" class="fa fa-instagram"></a>
-        <a href="https://github.com/Pasanting21" class="fa fa-github"></a>
-    </section>
-    <footer>
-        <p>&copy; 2025 My Portfolio</p>
-    </footer>
-
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <button onclick="resetScore()">Restart Score</button>
+    <div class="board" id="board"></div>
+    <div class="status" id="status">Player X's turn</div>
+  <button onclick="resetBoard()">Restart</button>
+  </div>
+  <script src="script.js"></script>
 </body>
-
 </html>
