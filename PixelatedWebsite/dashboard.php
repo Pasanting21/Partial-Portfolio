@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 if (!isset($_SESSION["username"])) {
@@ -9,6 +9,7 @@ if (!isset($_SESSION["username"])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Pixel Dashboard</title>
   <meta charset="UTF-8">
@@ -18,6 +19,7 @@ if (!isset($_SESSION["username"])) {
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       padding: 0;
@@ -69,6 +71,7 @@ if (!isset($_SESSION["username"])) {
         transform: translateY(40px);
         opacity: 0;
       }
+
       to {
         transform: translateY(0);
         opacity: 1;
@@ -79,6 +82,7 @@ if (!isset($_SESSION["username"])) {
       font-size: 20px;
       margin: 0 0 20px 0;
     }
+
     h2 {
       font-size: 12px;
       margin: 0 0 10px 0;
@@ -102,6 +106,7 @@ if (!isset($_SESSION["username"])) {
       justify-content: space-around;
       margin-bottom: 25px;
     }
+
     .stat {
       background: #00b894;
       border: 2px solid #000;
@@ -115,16 +120,19 @@ if (!isset($_SESSION["username"])) {
       cursor: default;
       user-select: none;
     }
+
     body.night .stat {
       background: #034f4f;
       box-shadow: 3px 3px 0 #012f2f;
       color: #a0d8ef;
     }
+
     .stat:hover {
       background: #00e6b8;
       box-shadow: 4px 4px 0 #004d40;
       color: #000;
     }
+
     body.night .stat:hover {
       background: #06e0e0;
       color: #000;
@@ -152,10 +160,12 @@ if (!isset($_SESSION["username"])) {
       color: #000;
       box-shadow: 5px 5px 0 #004d40;
     }
+
     body.night #LO {
       background-color: #034f4f;
       box-shadow: 4px 4px 0 #012f2f;
     }
+
     body.night #LO:hover {
       background-color: #06e0e0;
       color: #000;
@@ -173,6 +183,7 @@ if (!isset($_SESSION["username"])) {
       cursor: pointer;
       color: inherit;
     }
+
     .toggle-switch {
       margin-left: 8px;
       width: 40px;
@@ -182,6 +193,7 @@ if (!isset($_SESSION["username"])) {
       position: relative;
       transition: background 0.3s;
     }
+
     .toggle-switch::before {
       content: '';
       position: absolute;
@@ -192,11 +204,13 @@ if (!isset($_SESSION["username"])) {
       background: #fff;
       border-radius: 50%;
       transition: transform 0.3s;
-      box-shadow: 0 0 2px rgba(0,0,0,0.3);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     }
+
     .toggle-switch.active {
       background: #034f4f;
     }
+
     .toggle-switch.active::before {
       transform: translateX(20px);
     }
@@ -213,6 +227,7 @@ if (!isset($_SESSION["username"])) {
       opacity: 0.8;
       image-rendering: pixelated;
     }
+
     .cloud:nth-child(3) {
       top: 120px;
       left: -200px;
@@ -250,6 +265,7 @@ if (!isset($_SESSION["username"])) {
       0% {
         transform: translateX(0);
       }
+
       100% {
         transform: translateX(150vw);
       }
@@ -298,6 +314,7 @@ if (!isset($_SESSION["username"])) {
       background: linear-gradient(90deg, #ff7675 70%, #fdcb6e 100%);
       box-shadow: 4px 4px 0 #b33939;
     }
+
     .lo-btn.logout:hover {
       background: linear-gradient(90deg, #fdcb6e 70%, #ff7675 100%);
       color: #000;
@@ -308,6 +325,7 @@ if (!isset($_SESSION["username"])) {
       background: linear-gradient(90deg, #0984e3 70%, #74b9ff 100%);
       box-shadow: 4px 4px 0 #2d3436;
     }
+
     .lo-btn.change:hover {
       background: linear-gradient(90deg, #74b9ff 70%, #0984e3 100%);
       color: #000;
@@ -319,6 +337,7 @@ if (!isset($_SESSION["username"])) {
       color: #222;
       box-shadow: 4px 4px 0 #b2bec3;
     }
+
     .lo-btn.pagination:hover {
       background: linear-gradient(90deg, #ffeaa7 70%, #fdcb6e 100%);
       color: #000;
@@ -330,6 +349,7 @@ if (!isset($_SESSION["username"])) {
       color: #fff;
       box-shadow: 4px 4px 0 #2d3436;
     }
+
     .lo-btn.menu:hover {
       background: linear-gradient(90deg, #b2bec3 70%, #636e72 100%);
       color: #000;
@@ -340,6 +360,7 @@ if (!isset($_SESSION["username"])) {
       background: linear-gradient(90deg, #00b894 70%, #55efc4 100%);
       box-shadow: 4px 4px 0 #00b894;
     }
+
     .lo-btn.grade:hover {
       background: linear-gradient(90deg, #55efc4 70%, #00b894 100%);
       color: #000;
@@ -350,6 +371,7 @@ if (!isset($_SESSION["username"])) {
       background: linear-gradient(90deg, #6c5ce7 70%, #a29bfe 100%);
       box-shadow: 4px 4px 0 #2d3436;
     }
+
     .lo-btn.conditional:hover {
       background: linear-gradient(90deg, #a29bfe 70%, #6c5ce7 100%);
       color: #000;
@@ -361,6 +383,7 @@ if (!isset($_SESSION["username"])) {
         flex-direction: column;
         gap: 10px;
       }
+
       .lo-btn {
         min-width: 0;
         width: 100%;
@@ -430,4 +453,5 @@ if (!isset($_SESSION["username"])) {
   </script>
 
 </body>
+
 </html>
