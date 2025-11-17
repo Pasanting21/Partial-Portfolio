@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <div class="bg-shape bg-shape1"></div>
+  <div class="bg-shape bg-shape2"></div>
+  <div class="bg-shape bg-shape3"></div>
+  <div class="bg-shape bg-shape4"></div>
+  <a href="http://127.0.0.1:5500/index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i>- Back to
+        Portfolio -</a>
+  <div class="game" style="position:relative; z-index:1;">
+    <h1>Tic Tac Toe</h1>
+    <div class="scores">
+      <span id="scoreX">Player X: 0</span> |
+      <span id="scoreO">Player O: 0</span>
+    </div>
+    <button onclick="resetScore()">Restart Score</button>
+    <div class="board" id="board"></div>
+    <div class="status" id="status">Player X's turn</div>
+  <button onclick="resetBoard()">Restart</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

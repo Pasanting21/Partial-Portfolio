@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker With Local Storage</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts para modern ang look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font para wow ang icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!--just in case na di mo gana nag usa-->
+    <!--https://pasanting21.github.io/My-Portfolio/-->
+    <a href="http://127.0.0.1:5500/index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i>- Back to
+        Portfolio -</a>
+    <div class="container">
+        <h3><i class="fa-solid fa-list-check"></i> Task Tracker</h3>
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Add a task" />
+            <button class="add-btn" onclick="addTask()"><i class="fa-solid fa-plus"></i> Add</button>
+            <button class="restart-btn" onclick="restartTasks()"><i class="fa-solid fa-rotate-right"></i>
+                Restart</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
